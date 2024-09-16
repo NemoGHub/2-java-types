@@ -3,10 +3,15 @@ package com.example.task02;
 public class Task02 {
 
     public static String solution(String input) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return "";
+        /*
+        В качестве аргумента функции передается строка, содержащая целое число.
+        Определить самый наименьший целочисленный тип, к которому можно привести это число.
+        */
+        long value = Long.parseLong(input);
+        if (value >= -128 && value <= 127) return "byte";
+        else if (value >= -32_768 && value <= 32_767) return "short";
+        else if (value >= -2_147_483_648 && value <= 2_147_483_647) return "int";
+        else return "long";
     }
 
     public static void main(String[] args) {
