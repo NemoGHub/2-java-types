@@ -9,15 +9,22 @@ public class Task12 {
         // TODO раскомментируйте и исправьте код
 
         // Считаем проценты за год
+        percent = percent.add(new BigDecimal("1")).pow(12);
+        return sum.multiply(percent).setScale(9, BigDecimal.ROUND_HALF_UP);
+
+
+
 
         /*
         for (int i = 1; i <= 12; i++) {
-            sum += sum * percent;
-        }
-        return sum;
-        */
+            sum = sum.multiply(percent).setScale(9, BigDecimal.ROUND_HALF_UP);;
+        }*/
 
-        return BigDecimal.ZERO;
+
+        //return sum;
+
+
+        // return BigDecimal.ZERO;
     }
 
     public static void main(String[] args) {
